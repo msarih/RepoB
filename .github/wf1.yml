@@ -1,0 +1,12 @@
+name: Triggered Workflow
+
+on:
+  repository_dispatch:
+    types: [pr_merged]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "Workflow triggered from Repository B due to PR merge :)"
