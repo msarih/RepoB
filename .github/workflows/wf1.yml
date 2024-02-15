@@ -1,9 +1,8 @@
 name: Triggered Workflow
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [new_commit]
 
 jobs:
   build:
