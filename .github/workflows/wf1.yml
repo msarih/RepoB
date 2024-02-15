@@ -1,8 +1,9 @@
 name: Triggered Workflow
 
 on:
-  repository_dispatch:
-    types: [pr_merged]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
